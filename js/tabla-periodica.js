@@ -121,7 +121,7 @@ function abrirDetalle(el) {
   document.body.style.overflow = "hidden";
 
   // Guarda el progreso si el usuario tiene sesión iniciada (no hace nada si no)
-  marcarVisto(el.simbolo, { tipo: "elemento", nombre: el.nombre }).catch(() => {});
+  
 }
 
 function cerrarDetalle() {
