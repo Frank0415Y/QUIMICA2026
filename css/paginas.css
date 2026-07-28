@@ -1,0 +1,181 @@
+/* ==========================================================================
+   PÁGINAS DE CONTENIDO — estilos compartidos
+   ========================================================================== */
+
+.page-intro { padding: 40px 0 8px; }
+
+.page-intro__badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.page-intro h1 {
+  font-family: var(--font-display);
+  font-size: clamp(28px, 5vw, 42px);
+  margin: 10px 0 8px;
+}
+
+.page-intro p {
+  color: var(--ink-soft);
+  max-width: 62ch;
+  margin: 0;
+}
+
+.content-section {
+  padding: 28px 0;
+  border-top: 1px solid var(--paper-line);
+}
+
+.content-section:first-of-type { border-top: none; }
+
+.content-section h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.content-section h2 .n {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
+  font-weight: 400;
+}
+
+.content-section > p { color: var(--ink-soft); max-width: 68ch; margin: 0 0 16px; }
+
+.card-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.info-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  border-left: 4px solid var(--card-accent, var(--flame));
+}
+
+.info-card h3 {
+  font-family: var(--font-display);
+  font-size: 16px;
+  margin: 0 0 6px;
+}
+
+.info-card p {
+  font-size: 13.5px;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+/* Tabla comparativa simple */
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.compare-table th, .compare-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--paper-line);
+}
+
+.compare-table th {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-soft);
+}
+
+/* ---------- Ejercicios ---------- */
+
+.exercise {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius-md);
+  padding: 18px 20px;
+  margin-bottom: 14px;
+}
+
+.exercise__q {
+  font-weight: 600;
+  margin: 0 0 10px;
+}
+
+.exercise summary {
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--patina);
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.exercise summary::-webkit-details-marker { display: none; }
+.exercise summary::before { content: '▸'; transition: transform 0.15s ease; }
+.exercise[open] summary::before { transform: rotate(90deg); }
+
+.exercise__answer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed var(--paper-line);
+  font-size: 14px;
+  color: var(--ink);
+}
+
+/* ---------- Videos ---------- */
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 18px;
+}
+
+.video-card {
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.video-card__frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+  background: #000;
+}
+
+.video-card__frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-card__body { padding: 14px 16px; }
+
+.video-card__body h3 {
+  font-family: var(--font-display);
+  font-size: 15px;
+  margin: 0 0 4px;
+}
+
+.video-card__body p {
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  margin: 0;
+}

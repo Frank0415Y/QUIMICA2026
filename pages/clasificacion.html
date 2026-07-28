@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clasificación — CTI Ciencias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tabla-periodica.css">
+<link rel="stylesheet" href="../css/paginas.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="brand">
+      <span class="brand__badge" aria-hidden="true">CTI</span>
+      <span class="brand__text">
+        <span class="brand__eyebrow">Colegio Tecnológico en Informática</span>
+        <span class="brand__title">Ciencias</span>
+      </span>
+    </a>
+    <div class="header-actions"><button class="btn-login" id="loginBtn">Iniciar sesión</button></div>
+  </div>
+</header>
+
+<main>
+  <section class="container page-intro">
+    <span class="page-intro__badge" style="color:var(--patina);">Módulo 02 · Cl</span>
+    <h1>Clasificación de los elementos</h1>
+    <p>Los 118 elementos no están ordenados al azar: su posición en la tabla periódica revela cómo se comportan químicamente. Aquí vemos los tres grandes criterios de clasificación.</p>
+  </section>
+
+  <section class="container content-section">
+    <h2><span class="n">01</span> Grupos y periodos</h2>
+    <p>La tabla se organiza en <strong>18 columnas (grupos)</strong> y <strong>7 filas (periodos)</strong>. Los elementos de un mismo grupo comparten el número de electrones en su última capa, por eso tienen propiedades químicas parecidas. Los elementos de un mismo periodo tienen el mismo número de niveles de energía.</p>
+    <table class="compare-table">
+      <tr><th>Concepto</th><th>Qué indica</th><th>Ejemplo</th></tr>
+      <tr><td>Grupo (columna)</td><td>Electrones de valencia similares → reactividad parecida</td><td>Grupo 17: F, Cl, Br, I (halógenos)</td></tr>
+      <tr><td>Periodo (fila)</td><td>Número de niveles de energía ocupados</td><td>Periodo 3: Na, Mg, Al… todos con 3 niveles</td></tr>
+    </table>
+  </section>
+
+  <section class="container content-section">
+    <h2><span class="n">02</span> Familias químicas</h2>
+    <p>Ciertos grupos reciben un nombre propio por compartir un comportamiento muy característico:</p>
+    <div class="card-row">
+      <div class="info-card" style="--card-accent:var(--cat-alcalino)">
+        <h3>Alcalinos (grupo 1)</h3>
+        <p>Metales muy reactivos, blandos, reaccionan violentamente con el agua. Ej: Litio, Sodio, Potasio.</p>
+      </div>
+      <div class="info-card" style="--card-accent:var(--cat-alcalinoterreo)">
+        <h3>Alcalinotérreos (grupo 2)</h3>
+        <p>Metales reactivos pero menos que los alcalinos. Ej: Magnesio, Calcio, Bario.</p>
+      </div>
+      <div class="info-card" style="--card-accent:var(--cat-transicion)">
+        <h3>Metales de transición</h3>
+        <p>Grupos 3 al 12. Duros, buenos conductores, forman varios estados de oxidación. Ej: Hierro, Cobre, Oro.</p>
+      </div>
+      <div class="info-card" style="--card-accent:var(--cat-halogeno)">
+        <h3>Halógenos (grupo 17)</h3>
+        <p>No metales muy reactivos, forman sales al combinarse con metales. Ej: Flúor, Cloro, Yodo.</p>
+      </div>
+      <div class="info-card" style="--card-accent:var(--cat-gas-noble)">
+        <h3>Gases nobles (grupo 18)</h3>
+        <p>Prácticamente no reaccionan con nada; su última capa de electrones está completa. Ej: Helio, Neón, Argón.</p>
+      </div>
+      <div class="info-card" style="--card-accent:var(--cat-lantanido)">
+        <h3>Lantánidos y actínidos</h3>
+        <p>Las dos filas que se separan abajo de la tabla; muchos son radiactivos o muy escasos. Ej: Uranio, Cerio.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container content-section">
+    <h2><span class="n">03</span> Metales, no metales y metaloides</h2>
+    <p>Es la clasificación más general, según el tipo de comportamiento físico y químico:</p>
+    <table class="compare-table">
+      <tr><th>Tipo</th><th>Características</th><th>Ejemplos</th></tr>
+      <tr><td><strong>Metales</strong></td><td>Brillantes, conducen calor y electricidad, maleables, tienden a perder electrones.</td><td>Fe, Cu, Au, Al</td></tr>
+      <tr><td><strong>No metales</strong></td><td>Mal conductores, quebradizos en estado sólido, tienden a ganar electrones.</td><td>O, N, C, S</td></tr>
+      <tr><td><strong>Metaloides</strong></td><td>Propiedades intermedias entre metal y no metal; muchos son semiconductores.</td><td>Si, Ge, As, Sb</td></tr>
+    </table>
+    <p style="margin-top:14px;">💡 En la <a href="tabla-periodica.html" style="color:var(--patina); font-weight:600;">Tabla Periódica interactiva</a> cada categoría tiene su propio color — pasa el cursor o toca cualquier elemento para verlo.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 CTI — Colegio Tecnológico en Informática, Cobán</span>
+    <a href="../index.html" style="text-decoration:none;">← Volver al inicio</a>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+
+
+</body>
+</html>

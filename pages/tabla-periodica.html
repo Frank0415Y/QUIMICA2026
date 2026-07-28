@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tabla Periódica — CTI Ciencias</title>
+<meta name="description" content="Tabla periódica interactiva con los 118 elementos: pasa el cursor o toca cada elemento para ver sus propiedades.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/tabla-periodica.css">
+    <link rel="icon" type="image/png" href="../favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="../index.html" class="brand">
+      <span class="brand__badge" aria-hidden="true">CTI</span>
+      <span class="brand__text">
+        <span class="brand__eyebrow">Colegio Tecnológico en Informática</span>
+        <span class="brand__title">Ciencias</span>
+      </span>
+    </a>
+    <div class="header-actions">
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="container tp-intro">
+    <span class="tp-intro__badge">Módulo 01 · Tp</span>
+    <h1>Tabla Periódica</h1>
+    <p>Pasa el cursor sobre un elemento para ver su categoría iluminarse, o tócalo/haz clic para abrir su ficha completa con todos los datos.</p>
+
+    <form class="search-form tp-search" role="search" id="tpSearchForm">
+      <label for="tpSearchInput" class="sr-only" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Buscar elemento</label>
+      <input type="search" id="tpSearchInput" placeholder="Buscar por nombre, símbolo o número atómico…" autocomplete="off">
+      <button type="submit" aria-label="Buscar">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M11 11L14.5 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </form>
+  </section>
+
+  <section class="container tp-legend" id="tpLegend" aria-label="Leyenda de categorías"></section>
+
+  <section class="container tp-tableWrap">
+    <div class="tp-table" id="tpTable" role="grid" aria-label="Tabla periódica de los elementos"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 CTI — Colegio Tecnológico en Informática, Cobán</span>
+    <a href="../index.html" style="text-decoration:none;">← Volver al inicio</a>
+  </div>
+</footer>
+
+<!-- Panel de detalle del elemento -->
+<div class="tp-modal" id="tpModal" aria-hidden="true">
+  <div class="tp-modal__backdrop" data-tp-close></div>
+  <div class="tp-modal__card" role="dialog" aria-modal="true" aria-labelledby="tpModalName">
+    <button type="button" class="tp-modal__close" data-tp-close aria-label="Cerrar">&times;</button>
+    <div class="tp-modal__header">
+      <span class="tp-modal__z" id="tpModalZ"></span>
+      <span class="tp-modal__symbol" id="tpModalSymbol"></span>
+    </div>
+    <h2 class="tp-modal__name" id="tpModalName"></h2>
+    <p class="tp-modal__category" id="tpModalCategory"></p>
+    <p class="tp-modal__desc" id="tpModalDesc"></p>
+    <dl class="tp-modal__facts">
+      <div><dt>Masa atómica</dt><dd id="tpModalMasa"></dd></div>
+      <div><dt>Electronegatividad</dt><dd id="tpModalEn"></dd></div>
+      <div><dt>Estado (25 °C)</dt><dd id="tpModalEstado"></dd></div>
+      <div><dt>Periodo / Grupo</dt><dd id="tpModalPos"></dd></div>
+    </dl>
+  </div>
+</div>
+
+<script src="../js/main.js"></script>
+
+
+<script type="module" src="../js/tabla-periodica.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+[
+  {
+    "numero": "01",
+    "simbolo": "Tp",
+    "nombre": "Tabla Periódica",
+    "descripcion": "Explora los elementos, sus propiedades y categorías.",
+    "color": "#E1592C",
+    "keywords": ["tabla", "periodica", "elementos", "atomo", "simbolo"],
+    "url": "pages/tabla-periodica.html"
+  },
+  {
+    "numero": "02",
+    "simbolo": "Cl",
+    "nombre": "Clasificación",
+    "descripcion": "Cómo se organizan y agrupan los elementos y compuestos.",
+    "color": "#2F7A6B",
+    "keywords": ["clasificacion", "grupos", "familias", "metales", "no metales"],
+    "url": "pages/clasificacion.html"
+  },
+  {
+    "numero": "03",
+    "simbolo": "Qc",
+    "nombre": "Química en otras ciencias",
+    "descripcion": "Conexiones de la química con biología, física y más.",
+    "color": "#C9A227",
+    "keywords": ["quimica", "biologia", "fisica", "interdisciplinar"],
+    "url": "pages/quimica-otras-ciencias.html"
+  },
+  {
+    "numero": "04",
+    "simbolo": "Pm",
+    "nombre": "Propiedades de la materia",
+    "descripcion": "Físicas, químicas, generales y específicas de la materia.",
+    "color": "#8B5CF6",
+    "keywords": ["propiedades", "materia", "masa", "volumen", "densidad"],
+    "url": "pages/propiedades-materia.html"
+  },
+  {
+    "numero": "05",
+    "simbolo": "Mo",
+    "nombre": "Trabajar moléculas",
+    "descripcion": "Construye y visualiza estructuras moleculares.",
+    "color": "#1B7FA6",
+    "keywords": ["moleculas", "enlaces", "estructura", "compuestos"],
+    "url": "pages/moleculas.html"
+  },
+  {
+    "numero": "06",
+    "simbolo": "Ej",
+    "nombre": "Ejercicios",
+    "descripcion": "Practica electronegatividad y química básica, con respuestas.",
+    "color": "#C23B5C",
+    "keywords": ["ejercicios", "practica", "electronegatividad", "quiz"],
+    "url": "pages/ejercicios.html"
+  },
+  {
+    "numero": "07",
+    "simbolo": "Ex",
+    "nombre": "Explicaciones",
+    "descripcion": "Videos que explican los temas básicos de química.",
+    "color": "#E1592C",
+    "keywords": ["explicaciones", "videos", "youtube", "clases"],
+    "url": "pages/explicaciones.html"
+  }
+]

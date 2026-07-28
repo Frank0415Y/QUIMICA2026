@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CTI · Ciencias — Bienvenido de nuevo</title>
+<meta name="description" content="Portal de Ciencias del CTI: tabla periódica interactiva, clasificación de elementos, propiedades de la materia y más.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__badge" aria-hidden="true">CTI</span>
+      <span class="brand__text">
+        <span class="brand__eyebrow">Colegio Tecnológico en Informática</span>
+        <span class="brand__title">Ciencias</span>
+      </span>
+    </a>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M2 5H16M2 9H16M2 13H16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+      
+    </div>
+  </div>
+</header><nav id="sideMenu" style="position:fixed;top:0;right:-260px;width:250px;height:100%;background:#1b2430;color:white;padding:80px 20px;transition:right .3s;z-index:1000"><a href="index.html" style="display:block;color:white;margin:10px 0">Inicio</a><a href="pages/tabla-periodica.html" style="display:block;color:white;margin:10px 0">Tabla periódica</a></nav>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <p class="hero__eyebrow">Ciencias · CTI</p>
+        <h1>Bienvenido de nuevo,<br><span>¿qué deseas aprender hoy?</span></h1>
+        <p>Explora la tabla periódica, entiende cómo se clasifica la materia y descubre cómo la química se conecta con otras ciencias — todo en un solo lugar.</p>
+
+        <form class="search-form" role="search" id="searchForm">
+          <label for="searchInput" class="sr-only" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0);">Buscar tema o elemento</label>
+          <input type="search" id="searchInput" placeholder="Buscar un tema, elemento o palabra clave…" autocomplete="off">
+          <button type="submit" aria-label="Buscar">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <circle cx="7" cy="7" r="5.2" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M11 11L14.5 14.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </form>
+      </div>
+
+      <!-- Motivo decorativo: tubos de ensayo soltando humo -->
+      <svg class="hero__orbit" id="heroBeakers" viewBox="0 0 420 420" fill="none" aria-hidden="true">
+        <!-- Tubo 1 -->
+        <g transform="translate(120,0)">
+          <path d="M150 60 L150 190 Q150 230 190 230 Q230 230 230 190 L230 60" stroke="#1B2430" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M150 150 L230 150 L230 190 Q230 225 190 225 Q150 225 150 190 Z" fill="#E1592C" opacity="0.75"/>
+          <line x1="140" y1="60" x2="240" y2="60" stroke="#1B2430" stroke-width="3" stroke-linecap="round"/>
+          <g class="smoke smoke--1">
+            <circle cx="190" cy="45" r="7" fill="#5B6472" opacity="0.35"/>
+            <circle cx="182" cy="30" r="9" fill="#5B6472" opacity="0.28"/>
+            <circle cx="196" cy="15" r="6" fill="#5B6472" opacity="0.2"/>
+          </g>
+        </g>
+        <!-- Tubo 2 (más pequeño, atrás) -->
+        <g transform="translate(255,60)">
+          <path d="M0 30 L0 120 Q0 150 30 150 Q60 150 60 120 L60 30" stroke="#1B2430" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.7"/>
+          <path d="M0 95 L60 95 L60 120 Q60 145 30 145 Q0 145 0 120 Z" fill="#2F7A6B" opacity="0.65"/>
+          <line x1="-8" y1="30" x2="68" y2="30" stroke="#1B2430" stroke-width="2.5" stroke-linecap="round" opacity="0.7"/>
+          <g class="smoke smoke--2">
+            <circle cx="30" cy="18" r="5" fill="#5B6472" opacity="0.3"/>
+            <circle cx="24" cy="6" r="6" fill="#5B6472" opacity="0.22"/>
+          </g>
+        </g>
+        <!-- Burbujas dentro del tubo 1 -->
+        <g class="bubbles">
+          <circle cx="175" cy="200" r="3" fill="#fff" opacity="0.5"/>
+          <circle cx="200" cy="210" r="2.5" fill="#fff" opacity="0.4"/>
+          <circle cx="188" cy="190" r="2" fill="#fff" opacity="0.45"/>
+        </g>
+      </svg>
+    </div>
+  </section>
+
+  <section class="modules">
+    <div class="container">
+      <div class="modules__head">
+        <h2>Módulos</h2>
+        <span id="resultCount"></span>
+      </div>
+
+      <div class="module-grid" id="moduleGrid">
+        <!-- Las fichas se generan desde js/main.js a partir de js/modulos.json -->
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 CTI — Colegio Tecnológico en Informática, Cobán</span>
+    <span>Hecho para aprender ciencias, un elemento a la vez</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
